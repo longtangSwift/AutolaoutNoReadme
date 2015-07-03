@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Autolayout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHA-C4-lCk">
+                                <rect key="frame" x="109" y="66" width="471" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc9-14-9n7">
+                                <rect key="frame" x="20" y="31.5" width="81" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38e-ZF-sVC">
+                                <rect key="frame" x="20" y="69.5" width="81" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5mo-nr-dRb">
+                                <rect key="frame" x="109" y="28" width="471" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="Kc9-14-9n7" secondAttribute="leading" id="5EB-nC-uqx"/>
+                            <constraint firstItem="eHA-C4-lCk" firstAttribute="leading" secondItem="38e-ZF-sVC" secondAttribute="trailing" constant="8" symbolic="YES" id="5ho-2b-tzg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eHA-C4-lCk" secondAttribute="trailing" id="Jtl-Gf-k2Z"/>
+                            <constraint firstItem="5mo-nr-dRb" firstAttribute="leading" secondItem="Kc9-14-9n7" secondAttribute="trailing" constant="8" symbolic="YES" id="ODu-Z8-lxb"/>
+                            <constraint firstItem="38e-ZF-sVC" firstAttribute="baseline" secondItem="eHA-C4-lCk" secondAttribute="baseline" id="OQZ-ND-VhJ"/>
+                            <constraint firstItem="5mo-nr-dRb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="cMp-pt-wIm"/>
+                            <constraint firstItem="38e-ZF-sVC" firstAttribute="width" secondItem="Kc9-14-9n7" secondAttribute="width" id="gEs-fh-Z26"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5mo-nr-dRb" secondAttribute="trailing" id="iyP-AY-4Z7"/>
+                            <constraint firstItem="Kc9-14-9n7" firstAttribute="baseline" secondItem="5mo-nr-dRb" secondAttribute="baseline" id="jzy-7y-Bod"/>
+                            <constraint firstItem="eHA-C4-lCk" firstAttribute="top" secondItem="5mo-nr-dRb" secondAttribute="bottom" constant="8" symbolic="YES" id="oGn-lF-8Gi"/>
+                            <constraint firstItem="38e-ZF-sVC" firstAttribute="baseline" secondItem="eHA-C4-lCk" secondAttribute="baseline" id="p2G-Em-HD0"/>
+                            <constraint firstItem="Kc9-14-9n7" firstAttribute="baseline" secondItem="5mo-nr-dRb" secondAttribute="baseline" id="pIm-rX-S78"/>
+                            <constraint firstItem="Kc9-14-9n7" firstAttribute="baseline" secondItem="5mo-nr-dRb" secondAttribute="baseline" id="uiW-tq-jKE"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="38e-ZF-sVC" secondAttribute="leading" id="wag-b6-oSW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pIm-rX-S78"/>
+                                <exclude reference="uiW-tq-jKE"/>
+                                <exclude reference="p2G-Em-HD0"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="539" y="464"/>
         </scene>
     </scenes>
 </document>
